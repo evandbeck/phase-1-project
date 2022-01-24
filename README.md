@@ -1,1 +1,2 @@
-# phase-1-project
+# Phase 1 Project
+## Sweatshirt Website
