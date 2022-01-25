@@ -1,4 +1,4 @@
 # Phase 1 Project
-## Sweatshirt Website
 
-Today is the first day!
+## Sweatshirt Website Summary
+01/25/22 - Basic HTML & CSS
