@@ -5,7 +5,7 @@
         "name": "Skater jacket",
         "brand": "Thrasher",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKta6XDt9qNM8rqm7ecDKvGlLrXf9lmo7SA&usqp=CAU",
-        "description": "The perfect jacket for any board sport.",
+        "description": "The perfect jacket for any board sport!",
         "likes": 8,
         "quantity": "10"
       },
@@ -25,7 +25,7 @@
         "name": "Casual jacket",
         "brand": "Champion",
         "image": "https://m.media-amazon.com/images/I/610u9vnL+hL._AC_UX385_.jpg",
-        "description": "Grabbing dinner? Going in town? Then this jacket was meant for you.",
+        "description": "Grabbing dinner? Going out to town? Then this jacket was meant for you.",
         "likes": 9,
         "quantity": "13"
       },
@@ -34,7 +34,7 @@
         "name": "Hipster jacket",
         "brand": "H&M",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo22YlzZV8oN8Go4ExM_tLg-s-eF68JdpuQQ&usqp=CAU",
-        "description": "Want to look fly with your friends? Then you need this jacket.",
+        "description": "Want to look fly with your friends? Then you need this jacket!",
         "likes": 8,
         "quantity": "5"
       },
@@ -43,7 +43,7 @@
         "name": "Streetwear jacket",
         "brand": "Supreme",
         "image": "https://images.stockx.com/images/Supreme-Box-Logo-Hooded-Sweatshirt-FW21-White.jpg?fit=fill&bg=FFFFFF&w=480&h=320&auto=compress&q=90&dpr=2&trim=color&updated_at=1639059458&fm=webp",
-        "description": "If you are the hype beast in your friend group then stop looking, this jacket was made for you.",
+        "description": "If you are the hype beast in your friend group, then stop looking because we have the javket for you!",
         "likes": 11,
         "quantity": "16"
       }

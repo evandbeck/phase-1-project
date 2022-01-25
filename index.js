@@ -3,8 +3,8 @@ const sweatshirts = "http://localhost:3000/Sweatshirts"
 
 // DOM Elements
 const sweatshirtList = document.querySelector('#list')
-const sweatshirtInfo = document.querySelecotr('#info')
-
+const sweatshirtInfo = document.querySelector('#info')
+const quantityBtn = document.querySelector('#quantity')
 // Fetch
 function fetchSweatshirts () {
     fetch(sweatshirts)
@@ -20,25 +20,38 @@ function iterateArray (sweatshirtArray) {
         // Add Event Listener for Click
         p.addEventListener('click', function(e) {
             //Name
-            const h2 = document.createElement('h2')
+            const h2 = document.querySelector('#name')
             h2.innerText = sweatshirtObj.name
             sweatshirtInfo.append(h2)
             //Brand
-            const h3 = document.createElement('h3')
+            const h3 = document.querySelector('#brand')
             h3.innerText = sweatshirtObj.brand
             sweatshirtInfo.append(h3)
             //Image
-            const img = document.createElement('img')
+            const img = document.querySelector('#image')
             img.src = sweatshirtObj.image
             img.alt = sweatshirtObj.name
             sweatshirtInfo.append(img)
             //Description
-            const desc = document.createElement('p')
+            const desc = document.querySelector('#description')
             desc.innerText = sweatshirtObj.description
             sweatshirtInfo.append(desc)
+
+            const quant = document.querySelector('#quantity')
+            quant.innerText = sweatshirtObj.quantity
+
+
+
         },
         sweatshirtList.append(p)
-    })
+        )}
+    )}
+
+quantityBtn.addEventListener('click', quantityLeft)
+
+function quantityLeft (){
+  let count = document.querySelector('#quantity')
+count =-1
 }
 
 
