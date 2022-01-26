@@ -4,13 +4,18 @@ const sweatshirts = "http://localhost:3000/Sweatshirts"
 // DOM Elements
 const sweatshirtList = document.querySelector('#list')
 const sweatshirtInfo = document.querySelector('#info')
-const quantityBtn = document.querySelector('#quantity')
+const quantityBtn = document.querySelector('#buy')
+const quantity = document.querySelector('#quantity')
+
 // Fetch
 function fetchSweatshirts () {
     fetch(sweatshirts)
     .then(response => response.json())
     .then(sweatshirtArray => iterateArray(sweatshirtArray))
 }
+
+// DELIVERABLE: Static Display on Page Load
+
 
 // Display Sweatshirt Names on DOM
 function iterateArray (sweatshirtArray) {
@@ -36,9 +41,8 @@ function iterateArray (sweatshirtArray) {
             const desc = document.querySelector('#description')
             desc.innerText = sweatshirtObj.description
             sweatshirtInfo.append(desc)
-
-            const quant = document.querySelector('#quantity')
-            quant.innerText = sweatshirtObj.quantity
+            // Buy Now Button Quantity
+            quantity.innerText = sweatshirtObj.quantity
         },
         sweatshirtList.append(p)
         )}
@@ -48,9 +52,12 @@ function iterateArray (sweatshirtArray) {
 quantityBtn.addEventListener('click', quantityLeft)
 
 function quantityLeft () {
-  let count = document.querySelector('#quantity')
-    count =-1
+  if (quantity.innerText >= 1) {
+      quantity.innerText -= 1
+  } else (quantity.innerText = 0)
 }
+
+// Like Button
 
 
 // On Page Load Event
