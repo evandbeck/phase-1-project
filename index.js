@@ -1,5 +1,5 @@
 // Endpoints
-const sweatshirts = "http://localhost:3000/Sweatshirts"
+const sweatshirts = "http://localhost:3000/sweatshirts"
 
 // DOM Elements
 const sweatshirtList = document.querySelector('#list')
@@ -9,6 +9,7 @@ const quantity = document.querySelector('#quantity')
 const likeBtn = document.querySelector('#like')
 const totalLikes = document.querySelector('#totalLikes')
 const comment = document.querySelector('#form')
+const commentList = document.querySelector('#commentList')
 
 // Fetch
 function fetchSweatshirts () {
@@ -46,9 +47,8 @@ function iterateArray (sweatshirtArray) {
             sweatshirtInfo.append(desc)
             // Buy Now Button Quantity
             quantity.innerText = sweatshirtObj.quantity
-            // like button 
-            totalLikes.innerText = Number(sweatshirtObj.likes)
-
+            // Like Total
+            totalLikes.innerText = sweatshirtObj.likes
         },
         sweatshirtList.append(p)
         )}
@@ -67,20 +67,18 @@ function quantityLeft () {
 likeBtn.addEventListener('click', buttonLiked)
 
 function buttonLiked(){
-  Number(totalLikes.innerText += 1)
+  console.log(totalLikes.innerText += 1)
 }
 
-// comment.addEventListener('submit', commentForm)
+// Site Comment Form
+comment.addEventListener('submit', commentForm)
 
-// function commentForm(e) {
-//   e.preventDefault()
-
-// }
-//   let sweatshirtObj = {
-
-//     comment: e.target["comment"].value,
-//   }
-
+function commentForm(e) {
+    e.preventDefault()
+    const li = document.createElement('li')
+    li.innerText = e.target.comment.value
+    commentList.append(li)
+}
 
 // On Page Load Event
 document.addEventListener('DOMContentLoaded', fetchSweatshirts)
