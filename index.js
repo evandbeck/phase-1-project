@@ -11,13 +11,6 @@ const totalLikes = document.querySelector('#totalLikes')
 const comment = document.querySelector('#form')
 const commentList = document.querySelector('#commentList')
 
-// Fetch
-function fetchSweatshirts () {
-    fetch(sweatshirts)
-    .then(response => response.json())
-    .then(sweatshirtArray => iterateArray(sweatshirtArray))
-}
-
 // DELIVERABLE: Static Display on Page Load
 
 
@@ -27,7 +20,7 @@ function iterateArray (sweatshirtArray) {
         const p = document.createElement('p')
         p.innerText = sweatshirtObj.name
         // Add Event Listener for Click
-        p.addEventListener('click', function(e) {
+        p.addEventListener('click', () => {
             //Name
             const h2 = document.querySelector('#name')
             h2.innerText = sweatshirtObj.name
@@ -55,12 +48,13 @@ function iterateArray (sweatshirtArray) {
     )}
 
 // Buy Now Button
-quantityBtn.addEventListener('click', quantityLeft)
+quantityBtn.addEventListener('click', remainingQuantity)
 
-function quantityLeft () {
+function remainingQuantity () {
   if (quantity.innerText >= 1) {
       quantity.innerText -= 1
   } else (quantity.innerText = 0)
+  updateQuantity(sweatshirt)
 }
 
 // Like Button
@@ -78,6 +72,25 @@ function commentForm(e) {
     const li = document.createElement('li')
     li.innerText = e.target.comment.value
     commentList.append(li)
+}
+
+// Fetch Requests
+function fetchSweatshirts () {
+    fetch(sweatshirts)
+    .then(response => response.json())
+    .then(sweatshirtArray => iterateArray(sweatshirtArray))
+}
+
+function updateQuantity (sweatshirt) {
+    fetch(`http://localhost:3000/sweatshirts/${sweatshirtObj.id}`, {
+        method: 'PATCH',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(sweatshirt)
+    })
+    .then(response => response.json())
+    .then(sweatshirt => console.log(sweatshirt))
 }
 
 // On Page Load Event
