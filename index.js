@@ -11,7 +11,7 @@ const totalLikes = document.querySelector('#totalLikes')
 const comment = document.querySelector('#form')
 const commentList = document.querySelector('#commentList')
 
-// DELIVERABLE: Static Display on Page Load
+// Static Display on Page Load
 
 
 // Display Sweatshirt Names in List on DOM
