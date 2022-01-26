@@ -29,52 +29,43 @@ function renderSweatshirts (sweatshirtObj) {
     p.addEventListener('click', () => displaySelectedSweatshirt(sweatshirtObj))
 }
 
+// Display Selected Sweatshirt
 function displaySelectedSweatshirt(sweatshirtObj){
-        //Name
-        h2.innerText = sweatshirtObj.name
-        //sweatshirtInfo.append(h2)
-        //Brand
-        h3.innerText = sweatshirtObj.brand
-        //sweatshirtInfo.append(h3)
-        //Image
-        img.src = sweatshirtObj.image
-        img.alt = sweatshirtObj.name
-        //sweatshirtInfo.append(img)
-        //Description
-        desc.innerText = sweatshirtObj.description
-        sweatshirtInfo.append(h2, h3, img, desc)
+    h2.innerText = sweatshirtObj.name
+    h3.innerText = sweatshirtObj.brand
+    img.src = sweatshirtObj.image
+    img.alt = sweatshirtObj.name
+    desc.innerText = sweatshirtObj.description
+    sweatshirtInfo.append(h2, h3, img, desc)
 
-        // Buy Button Interactivity
-        quantity.innerText = sweatshirtObj.quantity
+    // Buy Button Interactivity
+    quantity.innerText = sweatshirtObj.quantity
+    buyBtn.addEventListener('click', () => remainingQuantity(sweatshirtObj))
 
-        buyBtn.addEventListener('click', () => remainingQuantity(sweatshirtObj))
-
-        
-        // Like Button Interactivity
-        let sweatshirtLike = sweatshirtObj.likes
-        totalLikes.innerText = sweatshirtLike
-
-        likeBtn.addEventListener('click', currentLikes)
-
-        function currentLikes () {
-            sweatshirtLike += 1
-            totalLikes.innerText = sweatshirtLike
-            updateBuyLike({...sweatshirtObj, likes: sweatshirtLike})
-        }
+    // Like Button Interactivity
+    totalLikes.innerText = sweatshirtLikesweatshirtObj.likes
+    likeBtn.addEventListener('click', () => currentLikes(sweatshirtObj))
 }
 
-
+// Buy & Update Sweatshirt
 function remainingQuantity(sweatshirtObj) {
     if (sweatshirtObj.quantity >= 1) {
         sweatshirtObj.quantity -= 1
         quantity.innerText = sweatshirtObj.quantity 
     } else {
-        buyBtn.innerText = "Sold Out!";
+        buyBtn.innerText = "Sold Out!"
     } 
-    updateBuyLike(sweatshirtObj)
+    updateSweatshirts(sweatshirtObj)
 }
 
-// FEATURE: Site Comment Form
+// Like & Update Sweatshirt
+function currentLikes (sweatshirtObj) {
+    sweatshirtObj.likes += 1
+    totalLikes.innerText = sweatshirtObj.likes
+    updateSweatshirts(sweatshirtObj)
+}
+
+// Site Comment Form >>> Add 'comments' array to db.json file. // Add Delete function.
 comment.addEventListener('submit', commentForm)
 
 function commentForm(e) {
@@ -91,7 +82,7 @@ function fetchSweatshirts () {
     .then(sweatshirtArray => iterateArray(sweatshirtArray))
 }
 
-function updateBuyLike (sweatshirtObj) {
+function updateSweatshirts (sweatshirtObj) {
     fetch(`http://localhost:3000/sweatshirts/${sweatshirtObj.id}`, {
         method: 'PATCH',
         headers: {
