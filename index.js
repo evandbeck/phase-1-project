@@ -6,6 +6,9 @@ const sweatshirtList = document.querySelector('#list')
 const sweatshirtInfo = document.querySelector('#info')
 const quantityBtn = document.querySelector('#buy')
 const quantity = document.querySelector('#quantity')
+const likeBtn = document.querySelector('#like')
+const totalLikes = document.querySelector('#totalLikes')
+const comment = document.querySelector('#form')
 
 // Fetch
 function fetchSweatshirts () {
@@ -43,6 +46,9 @@ function iterateArray (sweatshirtArray) {
             sweatshirtInfo.append(desc)
             // Buy Now Button Quantity
             quantity.innerText = sweatshirtObj.quantity
+            // like button 
+            totalLikes.innerText = Number(sweatshirtObj.likes)
+
         },
         sweatshirtList.append(p)
         )}
@@ -58,6 +64,22 @@ function quantityLeft () {
 }
 
 // Like Button
+likeBtn.addEventListener('click', buttonLiked)
+
+function buttonLiked(){
+  Number(totalLikes.innerText += 1)
+}
+
+// comment.addEventListener('submit', commentForm)
+
+// function commentForm(e) {
+//   e.preventDefault()
+
+// }
+//   let sweatshirtObj = {
+
+//     comment: e.target["comment"].value,
+//   }
 
 
 // On Page Load Event
