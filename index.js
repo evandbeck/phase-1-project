@@ -43,7 +43,7 @@ function displaySelectedSweatshirt(sweatshirtObj){
     buyBtn.addEventListener('click', () => remainingQuantity(sweatshirtObj))
 
     // Like Button Interactivity
-    totalLikes.innerText = sweatshirtLikesweatshirtObj.likes
+    totalLikes.innerText = sweatshirtObj.likes
     likeBtn.addEventListener('click', () => currentLikes(sweatshirtObj))
 }
 
