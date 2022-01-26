@@ -26,34 +26,29 @@ function renderSweatshirts (sweatshirtObj) {
     const p = document.createElement('p')
     p.innerText = sweatshirtObj.name
     sweatshirtList.append(p)
-    p.addEventListener('click', () => {
+    p.addEventListener('click', () => displaySelectedSweatshirt(sweatshirtObj))
+}
+
+function displaySelectedSweatshirt(sweatshirtObj){
         //Name
         h2.innerText = sweatshirtObj.name
-        sweatshirtInfo.append(h2)
+        //sweatshirtInfo.append(h2)
         //Brand
         h3.innerText = sweatshirtObj.brand
-        sweatshirtInfo.append(h3)
+        //sweatshirtInfo.append(h3)
         //Image
         img.src = sweatshirtObj.image
         img.alt = sweatshirtObj.name
-        sweatshirtInfo.append(img)
+        //sweatshirtInfo.append(img)
         //Description
         desc.innerText = sweatshirtObj.description
-        sweatshirtInfo.append(desc)
+        sweatshirtInfo.append(h2, h3, img, desc)
 
         // Buy Button Interactivity
-        let sweatshirtQuantity = sweatshirtObj.quantity
-        quantity.innerText = sweatshirtQuantity
+        quantity.innerText = sweatshirtObj.quantity
 
-        buyBtn.addEventListener('click', remainingQuantity)
+        buyBtn.addEventListener('click', () => remainingQuantity(sweatshirtObj))
 
-        function remainingQuantity () {
-            if (sweatshirtQuantity >= 1) {
-            sweatshirtQuantity -= 1
-            } else buyBtn.innerText = "Sold Out!";
-            quantity.innerText = sweatshirtQuantity
-            updateBuyLike({...sweatshirtObj, quantity: sweatshirtQuantity})
-        }
         
         // Like Button Interactivity
         let sweatshirtLike = sweatshirtObj.likes
@@ -66,7 +61,17 @@ function renderSweatshirts (sweatshirtObj) {
             totalLikes.innerText = sweatshirtLike
             updateBuyLike({...sweatshirtObj, likes: sweatshirtLike})
         }
-    })
+}
+
+
+function remainingQuantity(sweatshirtObj) {
+    if (sweatshirtObj.quantity >= 1) {
+        sweatshirtObj.quantity -= 1
+        quantity.innerText = sweatshirtObj.quantity 
+    } else {
+        buyBtn.innerText = "Sold Out!";
+    } 
+    updateBuyLike(sweatshirtObj)
 }
 
 // FEATURE: Site Comment Form
