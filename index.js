@@ -39,19 +39,17 @@ function iterateArray (sweatshirtArray) {
 
             const quant = document.querySelector('#quantity')
             quant.innerText = sweatshirtObj.quantity
-
-
-
         },
         sweatshirtList.append(p)
         )}
     )}
 
+// Buy Now Button
 quantityBtn.addEventListener('click', quantityLeft)
 
-function quantityLeft (){
+function quantityLeft () {
   let count = document.querySelector('#quantity')
-count =-1
+    count =-1
 }
 
 
