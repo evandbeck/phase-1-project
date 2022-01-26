@@ -14,14 +14,14 @@ const commentList = document.querySelector('#commentList')
 // DELIVERABLE: Static Display on Page Load
 
 
-// Display Sweatshirt Names on DOM
+// Display Sweatshirt Names in List on DOM
 function iterateArray (sweatshirtArray) {
     sweatshirtArray.forEach(sweatshirtObj => renderSweatshirts(sweatshirtObj))}
 
 function renderSweatshirts (sweatshirtObj) {
     const p = document.createElement('p')
     p.innerText = sweatshirtObj.name
-    // Add Event Listener for Click
+    sweatshirtList.append(p)
     p.addEventListener('click', () => {
         //Name
         const h2 = document.querySelector('#name')
@@ -44,28 +44,37 @@ function renderSweatshirts (sweatshirtObj) {
         quantity.innerText = sweatshirtObj.quantity
         // Like Total
         totalLikes.innerText = sweatshirtObj.likes
-    },
-    sweatshirtList.append(p)
-    )}
 
-// Buy Now Button
-quantityBtn.addEventListener('click', remainingQuantity)
+        quantityBtn.addEventListener('click', remainingQuantity)
 
-function remainingQuantity () {
-  if (quantity.innerText >= 1) {
-      quantity.innerText -= 1
-  } else (quantity.innerText = 0)
-  updateQuantity(sweatshirt)
+        function remainingQuantity () {
+         if (quantity.innerText >= 1) {
+            quantity.innerText -= 1
+        } else (quantity.innerText = 0)
+        updateQuantity(sweatshirtObj)
+        }
+    })
 }
 
-// Like Button
+
+// FEATURE: Buy Now Button
+// quantityBtn.addEventListener('click', remainingQuantity)
+
+// function remainingQuantity () {
+//   if (quantity.innerText >= 1) {
+//       quantity.innerText -= 1
+//   } else (quantity.innerText = 0)
+//   updateQuantity(sweatshirtObj)
+// }
+
+// FEATURE: Like Button
 likeBtn.addEventListener('click', buttonLiked)
 
 function buttonLiked(){
   console.log(totalLikes.innerText += 1)
 }
 
-// Site Comment Form
+// FEATURE: Site Comment Form
 comment.addEventListener('submit', commentForm)
 
 function commentForm(e) {
@@ -82,13 +91,13 @@ function fetchSweatshirts () {
     .then(sweatshirtArray => iterateArray(sweatshirtArray))
 }
 
-function updateQuantity (sweatshirt) {
+function updateQuantity (sweatshirtObj) {
     fetch(`http://localhost:3000/sweatshirts/${sweatshirtObj.id}`, {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(sweatshirt)
+        body: JSON.stringify(sweatshirtObj)
     })
     .then(response => response.json())
     .then(sweatshirt => console.log(sweatshirt))
