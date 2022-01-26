@@ -48,9 +48,11 @@ function renderSweatshirts (sweatshirtObj) {
         buyBtn.addEventListener('click', remainingQuantity)
 
         function remainingQuantity () {
+            if (sweatshirtQuantity >= 1) {
             sweatshirtQuantity -= 1
+            } else buyBtn.innerText = "Sold Out!";
             quantity.innerText = sweatshirtQuantity
-            updateBuyLike(sweatshirtObj)
+            updateBuyLike({...sweatshirtObj, quantity: sweatshirtQuantity})
         }
         
         // Like Button Interactivity
@@ -62,7 +64,7 @@ function renderSweatshirts (sweatshirtObj) {
         function currentLikes () {
             sweatshirtLike += 1
             totalLikes.innerText = sweatshirtLike
-            updateBuyLike(sweatshirtObj)
+            updateBuyLike({...sweatshirtObj, likes: sweatshirtLike})
         }
     })
 }
