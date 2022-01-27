@@ -25,6 +25,7 @@ function iterateArray (sweatshirtArray) {
 
 function renderSweatshirts (sweatshirtObj) {
     const p = document.createElement('p')
+    p.classList.add('brandName')
     p.innerText = sweatshirtObj.brand
     sweatshirtList.append(p)
     p.addEventListener('click', () => displaySelectedSweatshirt(sweatshirtObj))

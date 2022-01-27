@@ -1,21 +1,24 @@
 * {
     font-size: 100%;
-    font-family: Arial;
+    /* font-family: Arial; */
    }
 
 body {
-    background: lightgray;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2mQJQPdej10oiZIfxubgV-p4ZJHmbKwHYZzpgJDhqpsUBV8rhXaEUXZCpySuV0VoGs1g&usqp=CAU');
+    
 }
 
 header {
-    background: gray;
+    
     text-align: center;
     padding: 20px;
-    font-size: 35px;
+    font-size: 60px;
     color: brown;
-    -webkit-text-stroke: 1.11px black; 
+    -webkit-text-stroke: 1.2px black; 
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
+    font-family: Comic Sans MS;
+    background-color: rgba(255, 255, 255, .7);
 }
 
 .row {
@@ -25,35 +28,56 @@ header {
 }
 
 .mainSection {
-    background: darkgray;
+    
     margin: auto;
     width:400px;
     margin: 10px;
     padding: 20px;
+    background-color: rgba(220, 220, 220, .9);
+    outline: 1px solid;
+   border-radius: .55rem;
 }
 
 .divTitles {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
     color: brown; 
     -webkit-text-stroke: .6px black; 
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
+    text-align: center;
+    font-family: Trebuchet MS;
 }
 
 footer {
-    background: gray;
+    
     padding: 20px;
     font-size: 17px;
     color:brown;
     -webkit-text-stroke: .4px black; 
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
+    background-color: rgba(255, 255, 255, .7);
+    
 }
 
 button {
-    background: brown;
+    background-color: brown;
     color: white;
+    transition: background-color .5s;
+    display: inline-block;
+/*     padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center; */
+}
+
+button:hover {
+    background-color: white;
+    
 }
 
 .button {
@@ -66,4 +90,52 @@ button {
 
 .comment {
     padding: 5px;
+    position: relative;
+    background: brown;
+    border-radius: .55rem;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-family: Trebuchet MS;
+
+}
+.brandName {
+    padding: 5px;
+    position: relative;
+    background: brown;
+    border-radius: .55rem;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-family: Trebuchet MS;
+    transition: background-color .5s;
+}
+.brandName:hover {
+    background-color: white;
+}
+
+input[type = submit] {
+    font-family: Trebuchet MS;
+    background-color: brown;
+    color: white;
+    transition: background-color .5s;
+    display: inline-block;
+}
+
+input[type = submit]:hover {
+    background-color: white;
+}
+
+label {
+    font-family: Trebuchet MS;
+}
+
+input[type = text] {
+    border-radius: .55rem;
+    margin: 10px;
+}
+
+#name, #brand, #description {
+    font-family: Trebuchet MS;
+
 }
