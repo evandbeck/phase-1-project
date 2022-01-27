@@ -71,8 +71,10 @@ comment.addEventListener('submit', commentForm)
 function commentForm(e) {
     e.preventDefault()
     const li = document.createElement('li')
+    li.classList.add('comment')
     li.innerText = e.target.comment.value
     commentList.append(li)
+    comment.reset()
 }
 
 // Fetch Requests
