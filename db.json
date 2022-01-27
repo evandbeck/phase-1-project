@@ -7,7 +7,8 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKta6XDt9qNM8rqm7ecDKvGlLrXf9lmo7SA&usqp=CAU",
       "description": "The perfect jacket for any board sport!",
       "likes": 19,
-      "quantity": 16
+      "quantity": 16,
+      "comment": []
     },
     {
       "id": 2,
@@ -16,7 +17,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJF1QmbEEZOnkBZYwDP4RdnT1Z7km_izCFBDEMXperlyAIm4Yk_JwDVQboen6VB2eLDks&usqp=CAU",
       "description": "Football, soccer or baseball. This jacket is great for it all.",
       "likes": 21,
-      "quantity": 23
+      "quantity": 20
     },
     {
       "id": 3,
@@ -25,7 +26,7 @@
       "image": "https://m.media-amazon.com/images/I/610u9vnL+hL._AC_UX385_.jpg",
       "description": "Grabbing dinner? Going out to town? Then this jacket was meant for you.",
       "likes": 16,
-      "quantity": 19
+      "quantity": 15
     },
     {
       "id": 4,
@@ -48,7 +49,16 @@
   ],
   "comments": [
     {
-      "comment": "This site has got it all!"
+      "comment": "very cool!",
+      "id": 1
+    },
+    {
+      "comment": "Marc and Lindsey",
+      "id": 2
+    },
+    {
+      "comment": "Test",
+      "id": 3
     }
   ]
 }

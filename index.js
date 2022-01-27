@@ -69,14 +69,17 @@ function currentLikes (sweatshirtObj) {
 // Site Comment Form
 comment.addEventListener('submit', commentForm)
 
-function commentForm(e, commentsObj) {
+function commentForm(e) {
     e.preventDefault()
     const li = document.createElement('li')
     li.classList.add('comment')
     li.innerText = e.target.comment.value
     commentList.append(li)
+    let newCommentObj = {
+        comment: e.target.comment.value
+    }
     comment.reset()
-    updateComments(commentsObj)
+    updateComments(newCommentObj)
 }
 
 // db.json Comment Display
@@ -118,11 +121,10 @@ function updateSweatshirts (sweatshirtObj) {
 }
 
 function updateComments (commentObj) {
-    fetch(`http://localhost:3000/sweatshirts/${commentObj.id}`, {
-        method: 'PATCH',
+    fetch(comments, {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Accept: 'application/json'
         },
         body: JSON.stringify(commentObj)
     })
