@@ -1,5 +1,6 @@
 // Endpoints
 const sweatshirts = "http://localhost:3000/sweatshirts"
+const comments = "http://localhost:3000/comments"
 
 // DOM Elements
 const sweatshirtList = document.querySelector('#list')
@@ -65,16 +66,29 @@ function currentLikes (sweatshirtObj) {
     updateSweatshirts(sweatshirtObj)
 }
 
-// Site Comment Form >>> Add 'comments' array to db.json file. // Add Delete function.
+// Site Comment Form
 comment.addEventListener('submit', commentForm)
 
-function commentForm(e) {
+function commentForm(e, commentsObj) {
     e.preventDefault()
     const li = document.createElement('li')
     li.classList.add('comment')
     li.innerText = e.target.comment.value
     commentList.append(li)
     comment.reset()
+    updateComments(commentsObj)
+}
+
+// db.json Comment Display
+function iterateComments (commentsArray) {
+    commentsArray.forEach(commentsObj => displayComments(commentsObj))
+}
+
+function displayComments(commentsObj) {
+    const li = document.createElement('li')
+    li.classList.add('comment')
+    li.innerText = commentsObj.comment
+    commentList.append(li)
 }
 
 // Fetch Requests
@@ -82,6 +96,12 @@ function fetchSweatshirts () {
     fetch(sweatshirts)
     .then(response => response.json())
     .then(sweatshirtArray => iterateArray(sweatshirtArray))
+}
+
+function fetchComments () {
+    fetch(comments)
+    .then(response => response.json())
+    .then(commentsArray => iterateComments(commentsArray))
 }
 
 function updateSweatshirts (sweatshirtObj) {
@@ -97,5 +117,19 @@ function updateSweatshirts (sweatshirtObj) {
     .then(sweatshirt => console.log(sweatshirt))
 }
 
+function updateComments (commentObj) {
+    fetch(`http://localhost:3000/sweatshirts/${commentObj.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+        },
+        body: JSON.stringify(commentObj)
+    })
+    .then(response => response.json())
+    .then(comment => console.log(comment))
+}
+
 // On Page Load Event
 document.addEventListener('DOMContentLoaded', fetchSweatshirts)
+document.addEventListener('DOMContentLoaded', fetchComments)
