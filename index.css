@@ -66,13 +66,13 @@ button {
     color: white;
     transition: background-color .5s;
     display: inline-block;
-/*     padding: 0.35em 1.2em;
-    border: 0.1em solid #FFFFFF;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    text-align: center; */
+    padding: 0.35em 1.2em;
+    border: 0.1em solid white;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
 }
 
 button:hover {

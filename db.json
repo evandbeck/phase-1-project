@@ -6,7 +6,7 @@
       "brand": "Thrasher",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKta6XDt9qNM8rqm7ecDKvGlLrXf9lmo7SA&usqp=CAU",
       "description": "The perfect jacket for any board sport!",
-      "likes": 19,
+      "likes": 22,
       "quantity": 16,
       "comment": []
     },
@@ -53,24 +53,8 @@
       "id": 1
     },
     {
-      "comment": "Marc and Lindsey",
+      "comment": "Comment Here!",
       "id": 2
-    },
-    {
-      "comment": "Test",
-      "id": 3
-    },
-    {
-      "comment": "",
-      "id": 4
-    },
-    {
-      "comment": "",
-      "id": 5
-    },
-    {
-      "comment": "",
-      "id": 6
     }
   ]
 }
