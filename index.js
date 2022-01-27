@@ -24,7 +24,7 @@ function iterateArray (sweatshirtArray) {
 
 function renderSweatshirts (sweatshirtObj) {
     const p = document.createElement('p')
-    p.innerText = sweatshirtObj.name
+    p.innerText = sweatshirtObj.brand
     sweatshirtList.append(p)
     p.addEventListener('click', () => displaySelectedSweatshirt(sweatshirtObj))
 }
@@ -52,9 +52,7 @@ function remainingQuantity(sweatshirtObj) {
     if (sweatshirtObj.quantity >= 1) {
         sweatshirtObj.quantity -= 1
         quantity.innerText = sweatshirtObj.quantity 
-    } else {
-        buyBtn.innerText = "Sold Out!"
-    } 
+    } else;
     updateSweatshirts(sweatshirtObj)
 }
 

@@ -9,30 +9,42 @@
     <link href="index.css" rel="stylesheet">
 </head>
 <body>
-    <header>Header</header>
-    <section>
-        <div id="about">About & Form</div>
-            <form id="form" action="/action.php">
-            <label for="comment">Comment:</label><br>
-            <input type="text" id="comment"><br><br>
-            <input type="submit" value="Submit">
-            </form>
+    <header>
+        <p>Header</p>
+        <p>Your One-Stop Sweatshirt Shop</p>
+    </header>
+    <section class="row">
+        <div id="about" class="mainSection">
+            <p class="divTitles">About & Form</p>
+            <div>
+                <form id="form" action="/action.php">
+                <label for="comment">Comment:</label><br>
+                <input type="text" id="comment"><br><br>
+                <input type="submit" value="Submit">
+                </form>
+            </div>
             <div>
                 <ul id="commentList"></ul>
             </div>
-        <div id="info">Sweatshirt Info.</div>
-            <h2 id="name"></h2>
-            <h3 id="brand"></h3>
-            <img id="image"></img>
-            <p id="description"></p>
+        </div>
+        <div id="info" class="mainSection">
+            <dive>
+                <p class="divTitles">Sweatshirt Info.</p>
+                <h2 id="name"></h2>
+                <h3 id="brand"></h3>
+                <img id="image"></img>
+                <p id="description"></p>
+            </dive>
             <div>
                 <button id="buy">Buy Now</button>
                 <span id="quantity">[X]</span>
                 <button id="like">LIKE</button>
                 <span id="totalLikes">[X]</span>
             </div>
-
-        <div id="list">Sweatshirt List</div>
+        </div>
+        <div id="list" class="mainSection">
+            <p class="divTitles">Available Brands</p>
+        </div>
     </section>
     <footer>Footer</footer>
 </body>

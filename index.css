@@ -1,24 +1,31 @@
 body {
-    background: grey;
-    color: white;
+    background: lightgray;
 }
 
 header {
+    background: gray;
     padding: 20px
 }
 
-section {
+.row {
     padding: 20px;
     display: flex;
     flex-direction: row;
 }
 
-div {
-    background: blue;
+.mainSection {
+    background: darkgray;
     margin: auto;
-    width: 200px;
+    width:400px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.divTitles {
+    font-weight: bold;
 }
 
 footer {
+    background: gray;
     padding: 20px
 }
