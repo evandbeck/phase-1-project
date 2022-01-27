@@ -4,7 +4,13 @@ body {
 
 header {
     background: gray;
-    padding: 20px
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    color: brown;
+    -webkit-text-stroke: 1.11px black; 
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
 }
 
 .row {
@@ -23,9 +29,24 @@ header {
 
 .divTitles {
     font-weight: bold;
+    font-size: 22px;
+    color: brown; 
+    -webkit-text-stroke: .6px black; 
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
 }
 
 footer {
     background: gray;
-    padding: 20px
+    padding: 20px;
+    font-size: 17px;
+    color:brown;
+    -webkit-text-stroke: .4px black; 
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+}
+
+button {
+    background: brown;
+    color: white;
 }

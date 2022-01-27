@@ -35,6 +35,8 @@ function displaySelectedSweatshirt(sweatshirtObj){
     h3.innerText = sweatshirtObj.brand
     img.src = sweatshirtObj.image
     img.alt = sweatshirtObj.name
+    img.style.width = '300px'
+    img.style.height = '300px'
     desc.innerText = sweatshirtObj.description
     sweatshirtInfo.append(h2, h3, img, desc)
 
