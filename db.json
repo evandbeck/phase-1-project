@@ -2,46 +2,82 @@
   "sweatshirts": [
     {
       "id": 1,
-      "name": "Skater jacket",
+      "name": "Skater sweatshirt",
       "brand": "Thrasher",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKta6XDt9qNM8rqm7ecDKvGlLrXf9lmo7SA&usqp=CAU",
-      "description": "The perfect jacket for any board sport!",
-      "likes": 22,
-      "quantity": 16,
+      "description": "The perfect sweatshirt for any board sport!",
+      "likes": 24,
+      "quantity": 15,
       "comment": []
     },
     {
       "id": 2,
-      "name": "Athletic jacket",
+      "name": "Athletic sweatshirt",
       "brand": "Nike",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJF1QmbEEZOnkBZYwDP4RdnT1Z7km_izCFBDEMXperlyAIm4Yk_JwDVQboen6VB2eLDks&usqp=CAU",
-      "description": "Football, soccer or baseball. This jacket is great for it all.",
+      "description": "Football, soccer or baseball. This sweatshirt is great for it all.",
       "likes": 21,
       "quantity": 20
     },
     {
       "id": 3,
-      "name": "Casual jacket",
+      "name": "Casual sweatshirt",
       "brand": "Champion",
       "image": "https://m.media-amazon.com/images/I/610u9vnL+hL._AC_UX385_.jpg",
-      "description": "Grabbing dinner? Going out to town? Then this jacket was meant for you.",
+      "description": "Grabbing dinner? Going out to town? Then this sweatshirt was meant for you.",
       "likes": 16,
       "quantity": 15
     },
     {
       "id": 4,
-      "name": "Hipster jacket",
+      "name": "Hipster sweatshirt",
       "brand": "H&M",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo22YlzZV8oN8Go4ExM_tLg-s-eF68JdpuQQ&usqp=CAU",
-      "description": "Want to look fly with your friends? Then you need this jacket!",
+      "description": "Want to look fly with your friends? Then you need this sweatshirt!",
       "likes": 22,
       "quantity": 17
     },
     {
       "id": 5,
-      "name": "Streetwear jacket",
+      "name": "Streetwear sweatshirt",
       "brand": "Supreme",
       "image": "https://images.stockx.com/images/Supreme-Box-Logo-Hooded-Sweatshirt-FW21-White.jpg?fit=fill&bg=FFFFFF&w=480&h=320&auto=compress&q=90&dpr=2&trim=color&updated_at=1639059458&fm=webp",
+      "description": "If you are the hype beast in your friend group, then stop looking because we have the sweatshirt for you!",
+      "likes": 24,
+      "quantity": 22
+    },
+    {
+      "id": 6,
+      "name": "Athletic sweatshirt",
+      "brand": "Under Armour",
+      "image": "https://media.kohlsimg.com/is/image/kohls/3457872_Black?wid=600&hei=600&op_sharpen=1",
+      "description": "Express your style with this amazing and comfortable sweatshirt.",
+      "likes": 19,
+      "quantity": 22
+    },
+    {
+      "id": 7,
+      "name": "Sports sweatshirt",
+      "brand": "Adidas",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZwee48M2pLL-UYmpoP3zrDRabAPWFlp0blw&usqp=CAU",
+      "description": "If you are the hype beast in your friend group, then stop looking because we have the javket for you!",
+      "likes": 24,
+      "quantity": 22
+    },
+    {
+      "id": 8,
+      "name": "Boujie sweatshirt",
+      "brand": "Gucci",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsy3leLVCwC3oOjFy_BiM4EKGWyg0J5R3FNA&usqp=CAU",
+      "description": "If you are the hype beast in your friend group, then stop looking because we have the javket for you!",
+      "likes": 24,
+      "quantity": 22
+    },
+    {
+      "id": 9,
+      "name": "Rapper sweatshirt",
+      "brand": "Vlone",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDBAmH985_NWVqvkK5dCdPCyUxlkeE767AA&usqp=CAU",
       "description": "If you are the hype beast in your friend group, then stop looking because we have the javket for you!",
       "likes": 24,
       "quantity": 22
@@ -51,10 +87,6 @@
     {
       "comment": "very cool!",
       "id": 1
-    },
-    {
-      "comment": "Comment Here!",
-      "id": 2
     }
   ]
 }
