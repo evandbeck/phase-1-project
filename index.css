@@ -19,6 +19,7 @@ header {
     font-weight: bold;
     font-family: Comic Sans MS;
     background-color: rgba(255, 255, 255, .7);
+    box-shadow: 5px 5px 5px brown;
 }
 
 .row {
