@@ -6,8 +6,8 @@
       "brand": "Thrasher",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKta6XDt9qNM8rqm7ecDKvGlLrXf9lmo7SA&usqp=CAU",
       "description": "The perfect sweatshirt for any board sport!",
-      "likes": 24,
-      "quantity": 15,
+      "likes": 25,
+      "quantity": 7,
       "comment": []
     },
     {
@@ -53,7 +53,7 @@
       "image": "https://media.kohlsimg.com/is/image/kohls/3457872_Black?wid=600&hei=600&op_sharpen=1",
       "description": "Express your style with this amazing and comfortable sweatshirt.",
       "likes": 19,
-      "quantity": 22
+      "quantity": 20
     },
     {
       "id": 7,
@@ -87,6 +87,10 @@
     {
       "comment": "very cool!",
       "id": 1
+    },
+    {
+      "comment": "more sweatshirts please!",
+      "id": 2
     }
   ]
 }
