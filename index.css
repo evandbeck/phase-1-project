@@ -11,8 +11,8 @@ body {
 header {
     
     text-align: center;
-    padding: 20px;
-    font-size: 60px;
+    padding: 15px;
+    font-size: 30px;
     color: brown;
     -webkit-text-stroke: 1.2px black; 
     -webkit-font-smoothing: antialiased;
@@ -59,6 +59,7 @@ footer {
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
     background-color: rgba(255, 255, 255, .7);
+    box-shadow: 5px 5px 5px brown;
     
 }
 
@@ -74,6 +75,7 @@ button {
     box-sizing: border-box;
     text-decoration: none;
     text-align: center;
+    border-radius: .55rem;
 }
 
 button:hover {
@@ -116,11 +118,18 @@ button:hover {
 }
 
 input[type = submit] {
-    font-family: Trebuchet MS;
     background-color: brown;
     color: white;
     transition: background-color .5s;
     display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid white;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    border-radius: .55rem;
 }
 
 input[type = submit]:hover {
@@ -136,7 +145,27 @@ input[type = text] {
     margin: 10px;
 }
 
-#name, #brand, #description {
+#name, #description {
     font-family: Trebuchet MS;
 
+}
+
+#brand {
+    font-family: Trebuchet MS;
+    font-size: 20px;
+}
+ .siteTitle {
+     font-size: 70px;
+     margin-bottom: 0px;
+     margin-top: 10px;
+}
+
+#image {
+    display: block;
+    border-radius: .55rem;
+    -webkit-text-stroke: .4px black; 
+    -webkit-font-smoothing: antialiased;
+    outline: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -33,8 +33,8 @@ function renderSweatshirts (sweatshirtObj) {
 
 // Display Selected Sweatshirt
 function displaySelectedSweatshirt(sweatshirtObj){
-    h2.innerText = sweatshirtObj.name
     h3.innerText = sweatshirtObj.brand
+    h2.innerText = sweatshirtObj.name
     img.src = sweatshirtObj.image
     img.alt = sweatshirtObj.name
     img.style.width = '300px'
